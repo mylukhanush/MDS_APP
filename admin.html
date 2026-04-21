@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDS MART | Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+
+    <header>
+        <div class="container nav-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5L20 15L12 25" stroke="#004ead" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 5L30 15L22 25" stroke="#d61f26" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span>ADMIN</span><span>PORTAL</span>
+                </div>
+            </div>
+            
+            <div id="admin-controls">
+                <button class="auth-btn btn-toggle" onclick="location.href='/'">View Store</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" id="admin-root">
+        <!-- Password Check will be injected here first -->
+        <div class="login-screen" id="admin-auth">
+            <div class="login-card">
+                <h2>Admin Login</h2>
+                <p>Authorized personnel only</p>
+                <div class="form-group" style="margin-top: 24px;">
+                    <input type="password" id="admin-pass" placeholder="Enter security key...">
+                </div>
+                <button class="btn-submit" onclick="admin.authenticate()">Access Inventory</button>
+            </div>
+        </div>
+
+        <div id="admin-content" style="display: none;">
+            <!-- Content will be injected by admin.js -->
+        </div>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

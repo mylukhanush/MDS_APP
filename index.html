@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDS MART | Premium Provision Store</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <a href="#" class="logo" onclick="app.showHome()">
+                <div class="logo-icon">
+                    <!-- CSS/SVG Recreated Logo from Logo Provided -->
+                    <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5L20 15L12 25" stroke="#004ead" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 5L30 15L22 25" stroke="#d61f26" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span>MDS</span><span>MART</span>
+                </div>
+            </a>
+            
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#" onclick="app.showProducts()">All Products</a></li>
+                </ul>
+            </nav>
+
+            <div id="user-controls" style="display: flex; align-items: center; gap: 24px;">
+                <button class="cart-btn" onclick="app.showCart()" style="background: none; border: none; cursor: pointer; position: relative;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span id="cart-count" class="cart-badge">0</span>
+                </button>
+                <a href="/admin" style="font-size: 11px; color: var(--text-muted); text-decoration: none; font-weight: 600;">Partner Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal for Checkout -->
+    <div id="checkout-container"></div>
+
+
+    <main class="container" id="app-root">
+        <!-- Products will be injected here automatically -->
+        <div style="text-align: center; padding: 100px; color: var(--text-muted);">
+            <p>Loading the store...</p>
+        </div>
+    </main>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
